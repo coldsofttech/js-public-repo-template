@@ -10,7 +10,7 @@ Open an issue using one of the provided forms. Search existing issues first. For
 
 1. Fork the repository and create a branch from `main`.
 2. Make your change, keeping it focused on one thing.
-3. Install the commit checks: `pip install pre-commit && pre-commit install --hook-type pre-commit --hook-type post-commit`.
+3. Install dependencies and the commit checks: `npm ci && pip install pre-commit && pre-commit install --hook-type pre-commit --hook-type post-commit`. Node 22 or newer is required (see `.nvmrc`).
 4. Add an entry under `[Unreleased]` in `CHANGELOG.md` (one or two lines, written from a reader's point of view).
 5. Open a pull request and fill in the template.
 

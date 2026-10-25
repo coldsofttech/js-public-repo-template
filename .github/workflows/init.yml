@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   init:
-    if: github.repository != 'coldsofttech/public-repo-template'
+    if: github.repository != 'coldsofttech/js-public-repo-template'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:

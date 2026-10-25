@@ -1,23 +1,26 @@
-# public-repo-template
+# js-public-repo-template
 
-A ready-to-use starting point for public GitHub repositories, with community files, issue and pull request templates, automated dependency updates and security checks already in place.
+A ready-to-use starting point for public JavaScript packages. It comes with community files, issue and pull request templates, automated dependency updates, security checks, testing, and publishing to npm already in place.
 
 ## What you get
 
+- One or more npm packages in a single repository, each built and tested on its own
+- An example package and a small demo app to copy from
+- Automatic checks on every pull request across Node 22, 24 and 26
+- Publishing to npm when you create a GitHub release, with no stored tokens
 - Contribution, conduct, support and security-reporting guidelines
 - Issue forms and a pull request template
-- Automated dependency updates and dependency review
-- A changelog ready for your first release
-- Consistent editor and line-ending settings
+- Automated dependency updates, dependency review and weekly vulnerability checks
 - Secret scanning before every commit
 
 ## Getting started
 
 1. Click **Use this template** on GitHub and create your new repository.
-2. Replace this README with a description of your project.
-3. Run the **Init** workflow from the Actions tab and merge the pull request it opens. This fills in your owner and repository name. Then add your contact details in `CODE_OF_CONDUCT.md`, delete `.github/workflows/init.yml`, and replace the description above.
-4. Apply the repository protections by following the [setup guide](docs/repo-setup.md).
-5. Install the commit checks: `pip install pre-commit && pre-commit install --hook-type pre-commit --hook-type post-commit`.
+2. Run the **Init** workflow from the Actions tab and merge the pull request it opens. This fills in your owner and repository name. Then delete `.github/workflows/init.yml`.
+3. Rename `packages/example-package`, set your npm scope (replace `@scope`) and fill in the details in its `package.json`.
+4. Add your contact details in `CODE_OF_CONDUCT.md` and replace this description with your own.
+5. Apply the repository protections and set up npm publishing by following the [setup guide](docs/repo-setup.md).
+6. Install the checks that run on each commit: `npm ci && pip install pre-commit && pre-commit install --hook-type pre-commit --hook-type post-commit`.
 
 ## Contributing
 

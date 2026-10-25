@@ -25,4 +25,7 @@ desktop.ini
 # Claude Code local settings
 .claude/settings.local.json
 
-# Add language- or tool-specific ignores below
+# Node
+node_modules/
+dist/
+coverage/
