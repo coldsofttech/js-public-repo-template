@@ -20,7 +20,26 @@ repos:
     hooks:
       - id: sweepito-scan
       - id: sweepito-clean
-  - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.17.2
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.12
     hooks:
-      - id: markdownlint-cli2
+      - id: actionlint
+  - repo: local
+    hooks:
+      - id: prettier
+        name: prettier
+        entry: npm run format:check
+        language: system
+        pass_filenames: false
+      - id: eslint
+        name: eslint
+        entry: npm run lint
+        language: system
+        types: [javascript]
+        pass_filenames: false
+      - id: vitest
+        name: vitest
+        entry: npm test
+        language: system
+        types: [javascript]
+        pass_filenames: false

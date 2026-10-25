@@ -6,12 +6,12 @@ These override default behavior. Follow them exactly.
    writing code, use `AskUserQuestion` to ask first — don't guess, implement, and explain the
    guess afterward.
 
-2. **Running tests/lint/commit/push**: don't run `pytest`, lint, `git commit`, or
+2. **Running tests/lint/commit/push**: don't run `npm test`, `npm run lint`, `git commit`, or
    `git push` unless the user explicitly asks for it, or it's genuinely necessary to verify the
    specific change you just made (e.g. confirming a bug fix actually fixes the bug). Implementing
    or fixing code does not by itself imply "and then test/lint/commit/push it."
-   - When a test run is genuinely necessary, scope it narrowly — the specific test file/module/
-     package the change touches — never a full-suite run, unless the user explicitly asked for one.
+   - When a test run is genuinely necessary, scope it narrowly — the specific test file or
+     workspace package the change touches (e.g. `npx vitest run packages/<name>`) — never a full-suite run, unless the user explicitly asked for one.
 
 3. **Investigation budget [IMPORTANT]**: if a task needs investigation (reading code, searching, tracing a
    bug), budget roughly 1,000 tokens of exploration for it. If you hit that limit and need more,
